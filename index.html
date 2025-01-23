@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Currency Converter Extension</title>
+        <style>
+            body {
+                background-color: #1a1a1a;
+                min-width: 440px;
+            }
+
+            input,
+            select {
+                display: inline;
+                background: #f9f9f9;
+                border: 1px solid #cccccc;
+                border-radius: 8px;
+                padding: 10px 14px;
+                width: 60px;
+                font-size: 12px;
+                color: #333;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
+            }
+
+            input:focus,
+            select:focus {
+                outline: none;
+                border-color: #4caf50;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            input::placeholder {
+                color: #aaaaaa;
+                font-style: italic;
+            }
+
+            select {
+                appearance: none;
+                background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"%3E%3Cpath fill="%23333" d="M5 6L0 0h10z"/%3E%3C/svg%3E')
+                    no-repeat right 10px center;
+                background-color: #f9f9f9;
+                background-size: 10px 6px;
+            }
+
+            option {
+                padding: 10px;
+                font-size: 16px;
+                color: #333;
+                background: #fff;
+                border: none;
+            }
+
+            input:hover,
+            select:hover {
+                border-color: #66bb6a;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            button {
+                background: linear-gradient(90deg, #4caf50, #2e7d32);
+                border: none;
+                color: white;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 6px 12px;
+                border-radius: 8px;
+                cursor: pointer;
+                box-shadow: 0 4px 6px #5c678c63;
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                background: linear-gradient(90deg, #66bb6a, #388e3c);
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-2px);
+            }
+
+            button:active {
+                background: linear-gradient(90deg, #388e3c, #2e7d32);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                transform: translateY(1px);
+            }
+
+            #converted-amount {
+                display: inline;
+                color: white;
+                font-size: 14px;
+                right: 0;
+                margin: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="converter-form">
+            <select id="from-currency"></select>
+            <select id="to-currency"></select>
+            <input placeholder="Amount" id="amount" />
+            <button type="submit">convert</button>
+            <div id="converted-amount"></div>
+        </form>
+    </body>
+    <script src="script.js"></script>
+</html>

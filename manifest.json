@@ -1,0 +1,11 @@
+{
+    "name": "Currency Coverter",
+    "version": "1.0.0",
+    "description": "Currency converter for ease of online shopping",
+    "manifest_version": 3,
+    "author": "Alex Heywood",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Currency Converter"
+    }
+}
